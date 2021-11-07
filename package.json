@@ -1,0 +1,17 @@
+{
+  "name": "randomearh-owners-snapshot",
+  "version": "1.0.0",
+  "description": "Creates a json file with all owners registered on RandomEarth",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Guztavosm (@guztavosm)",
+  "license": "ISC",
+  "dependencies": {
+    "cli-progress": "^3.9.1",
+    "puppeteer": "^10.4.0",
+    "puppeteer-extra": "^3.2.3",
+    "puppeteer-extra-plugin-stealth": "^2.9.0"
+  }
+}
