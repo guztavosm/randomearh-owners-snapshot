@@ -14,5 +14,13 @@ npm install
 yarn
 ```
 
+## Update Collection ID at line 10
+Ex: [Teranauts](https://randomearth.io/collections/terra1whyze49j9d0672pleaflk0wfufxrh8l0at2h8q)
+```
+const CollectionAddress = "terra1whyze49j9d0672pleaflk0wfufxrh8l0at2h8q";
+```
+
 ## Execute script
+```
 node index.js
+```

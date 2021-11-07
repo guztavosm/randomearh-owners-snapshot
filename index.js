@@ -6,7 +6,8 @@ const path = require("path");
 // Random Earth API Base URL
 const RandomEarthBaseURL = "https://randomearth.io/api/items";
 // Fill it with the collection NFT contract
-const CollectionAddress = "terra1whyze49j9d0672pleaflk0wfufxrh8l0at2h8q";
+// Example: const CollectionAddress = "terra1whyze49j9d0672pleaflk0wfufxrh8l0at2h8q";
+const CollectionAddress = "<<CollectionAddress>>";
 const ProgressBar = new cliProgress.SingleBar(
   {},
   cliProgress.Presets.shades_classic
