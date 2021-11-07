@@ -21,6 +21,11 @@ const CollectionAddress = "terra1whyze49j9d0672pleaflk0wfufxrh8l0at2h8q";
 ```
 
 ## Execute script
+### NPM
 ```
-node index.js
+npm start
+```
+### Yarn
+```
+yarn run start
 ```
