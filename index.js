@@ -18,9 +18,7 @@ const ProgressBar = new cliProgress.SingleBar(
   let currentPage = 1;
   let RESnapshot = {};
 
-  console.log(
-    `Taking Owners snapshot from: ${CollectionAddress}`
-  );
+  console.log(`Taking Owners snapshot from: ${CollectionAddress}`);
   do {
     const getQuery = {
       collection_addr: CollectionAddress,
@@ -66,16 +64,22 @@ const ProgressBar = new cliProgress.SingleBar(
   let SnapshotArray = Object.values(RESnapshot);
 
   // Sort by token numbers
-  SnapshotArray = SnapshotArray.sort(function (a, b) {
-    return a.tokens_found < b.tokens_found ? -1 : 1;
-  });
+  SnapshotArray = SnapshotArray.sort((a, b) =>
+    a.tokens_found < b.tokens_found ? -1 : 1
+  );
 
+  const totalTokensFound = SnapshotArray.reduce(
+    (sum, item) => (sum += item.tokens_found),
+    0
+  );
   const SnapshotFileName = "./snapshot.json";
   // Create JSON file
   fs.writeFileSync(SnapshotFileName, JSON.stringify(SnapshotArray));
   const SnapshotAbsolutePath = path.resolve(SnapshotFileName);
   const now = new Date();
 
-  console.log(`Snapshot taken sucessfully at ${now}`);
+  console.log(
+    `Snapshot taken sucessfully at ${now}, Tokens found: ${totalTokensFound}`
+  );
   console.log(`You can check the snapshot here: ${SnapshotAbsolutePath}`);
 })();
