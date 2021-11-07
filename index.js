@@ -52,7 +52,9 @@ const ProgressBar = new cliProgress.SingleBar(
         }
       }
       currentPage++;
-      ProgressBar.update(currentPage);
+      if (currentPage <= totalPages) {
+        ProgressBar.update(currentPage);
+      }
     } catch (err) {
       console.error(err);
       sleep(err);
