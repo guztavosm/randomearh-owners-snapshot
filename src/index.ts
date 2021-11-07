@@ -58,7 +58,7 @@ const ProgressBar = new cliProgress.SingleBar(
       }
     } catch (err) {
       console.error(err);
-      sleep(err);
+      await sleep(100);
     }
   } while (currentPage <= totalPages);
 
