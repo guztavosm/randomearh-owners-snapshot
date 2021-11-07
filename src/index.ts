@@ -1,7 +1,8 @@
-const { doRequest, encodeQueryData } = require("./services/APIService");
-const cliProgress = require("cli-progress");
-const fs = require("fs");
-const path = require("path");
+import cliProgress from "cli-progress";
+import fs from "fs";
+import path from "path";
+import { doRequest, encodeQueryData, sleep } from "./services/APIService";
+import { SnapshotRecord } from "./interfaces/SnapshotRecord.interface";
 
 // Random Earth API Base URL
 const RandomEarthBaseURL = "https://randomearth.io/api/items";
@@ -63,7 +64,7 @@ const ProgressBar = new cliProgress.SingleBar(
 
   ProgressBar.stop();
   // Convert object to array
-  let SnapshotArray = Object.values(RESnapshot);
+  let SnapshotArray: SnapshotRecord[] = Object.values(RESnapshot);
 
   // Sort by token numbers
   SnapshotArray = SnapshotArray.sort((a, b) =>

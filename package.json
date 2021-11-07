@@ -4,7 +4,8 @@
   "description": "Creates a json file with all owners registered on RandomEarth",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "tsc && node build/index.js",
+    "tsc": "tsc"
   },
   "author": "Guztavosm (@guztavosm)",
   "license": "ISC",
@@ -13,5 +14,8 @@
     "puppeteer": "^10.4.0",
     "puppeteer-extra": "^3.2.3",
     "puppeteer-extra-plugin-stealth": "^2.9.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.4"
   }
 }
